@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/activity_imageview"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="@color/teal_700"
+        android:scaleType="matrix"
+        android:src="@drawable/ic_launcher_background" />
+
+    <Switch
+        android:id="@+id/activity_switch"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:textOff="off"
+        android:textOn="on"
+        android:showText="true"/>
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="1"/>
+        <RadioButton
+            android:id="@+id/b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"/>
+        <RadioButton
+            android:id="@+id/c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"/>
+    </RadioGroup>
+</LinearLayout>

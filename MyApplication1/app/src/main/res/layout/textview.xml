@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|center"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:lineSpacingExtra="100dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="zbcdefghijklmnopqrstuvwxyz"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_launcher_background"
+        android:drawablePadding="10dp"
+        android:maxLength="5"
+        android:text="zbcdefghijklmnopqrstuvwxyz" />
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:maxLines="5"
+        android:text="zbcdefghijklmnopqrstuvwxyz"
+        android:textColor="#000"/>
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="zbcdefghijklmnopqrstuvwxyz" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:text="www.baidu.com"/>
+</LinearLayout>
