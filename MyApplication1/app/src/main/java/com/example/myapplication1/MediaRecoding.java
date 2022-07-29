@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MRecoding extends AppCompatActivity {
+public class MediaRecoding extends AppCompatActivity {
     private File file ;
     private File filePast ;
     private MediaRecorder mediaRecorder;
@@ -49,8 +49,11 @@ public class MRecoding extends AppCompatActivity {
             if(mediaRecorder == null) {
                 mediaRecorder = new MediaRecorder();
             }
+//
             mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+//
             mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_2_TS);
+//            
             mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
             filePast = new File(file.getPath()+"/"+recodData()+".mp3");
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -112,14 +115,14 @@ public class MRecoding extends AppCompatActivity {
     }
     public void RequestPermission()
     {
-        if( ContextCompat.checkSelfPermission(MRecoding.this,Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(MRecoding.this, new String []{Manifest.permission.RECORD_AUDIO},1);
+        if( ContextCompat.checkSelfPermission(MediaRecoding.this,Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(MediaRecoding.this, new String []{Manifest.permission.RECORD_AUDIO},1);
         }
-        if( ContextCompat.checkSelfPermission(MRecoding.this,Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(MRecoding.this, new String []{Manifest.permission.READ_EXTERNAL_STORAGE},1);
+        if( ContextCompat.checkSelfPermission(MediaRecoding.this,Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(MediaRecoding.this, new String []{Manifest.permission.READ_EXTERNAL_STORAGE},1);
         }
-        if( ContextCompat.checkSelfPermission(MRecoding.this,Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(MRecoding.this, new String []{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
+        if( ContextCompat.checkSelfPermission(MediaRecoding.this,Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(MediaRecoding.this, new String []{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
         }
     }
     public String recodData(){

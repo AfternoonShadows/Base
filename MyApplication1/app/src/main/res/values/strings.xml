@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">My Application1</string>
     <string name="activity_button">提交</string>
+    <string name="audio_recoding_recoding">开始录音</string>
+    <string name="audio_recoding_stop">停止录音</string>
+    <string name="audio_recoding_play">开始播放</string>
+    <string name="audio_recoding_quit">停止播放</string>
 </resources>
