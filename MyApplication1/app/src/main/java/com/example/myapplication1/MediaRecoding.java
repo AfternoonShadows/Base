@@ -55,20 +55,22 @@ public class MediaRecoding extends AppCompatActivity {
             mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_2_TS);
 //            
             mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
-            filePast = new File(file.getPath()+"/"+recodData()+".mp3");
+            filePast = new File(file.getPath()+"/"+recodData()+".amr");
+            if(filePast.exists())
+                filePast.delete();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 mediaRecorder.setOutputFile(filePast);
             }
             try {
                 mediaRecorder.prepare();
-                mediaRecorder.start();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
+            mediaRecorder.start();
             i = 1;
         } else if(i == 1){
             try {
+                Log.e("最大振幅", String.valueOf(20*Math.log10(Math.abs(mediaRecorder.getMaxAmplitude()))));
                 mediaRecorder.stop();
                 mediaRecorder.release();
                 mediaRecorder = null;
