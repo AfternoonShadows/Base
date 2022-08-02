@@ -1,7 +1,9 @@
 package com.example.myapplication1;
 
 import android.media.AudioFormat;
+import android.media.AudioManager;
 import android.media.AudioRecord;
+import android.media.AudioTrack;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
@@ -22,6 +24,7 @@ public class AudioRecoding extends AppCompatActivity {
     private File recodingFile;
     private int bufferSizeInBytes = 0;
     private boolean isrecoding = false;
+    private AudioTrack audioTrack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,9 +99,20 @@ public class AudioRecoding extends AppCompatActivity {
         Log.e("AudioRecodingStop", String.valueOf(view.getId()));
     }
     public void AudioRecodingPlay(View view){
+        final byte data[] = new byte[bufferSizeInBytes];
+        audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC,44100,AudioFormat.CHANNEL_IN_MONO,AudioFormat.ENCODING_PCM_16BIT,
+                data.length,AudioTrack.MODE_STATIC);
+        audioTrack.write(data,0,data.length);
+        audioTrack.play();
         Log.e("AudioRecodingPlay", String.valueOf(view.getId()));
     }
     public void AudioRecodingQuit(View view){
+        if(audioRecord != null)
+        {
+            audioTrack.stop();
+            audioTrack.release();
+            audioTrack = null;
+        }
         Log.e("AudioRecodingQuit", String.valueOf(view.getId()));
     }
     public String recodData(){
