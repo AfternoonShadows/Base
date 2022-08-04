@@ -5,4 +5,33 @@
     <string name="audio_recoding_stop">停止录音</string>
     <string name="audio_recoding_play">开始播放</string>
     <string name="audio_recoding_quit">停止播放</string>
+    <string-array name="FragmentMainListArray">
+        <item>ViewPager2 with Fragments</item>
+        <item>ViewPager2 with a Mutable Collection (Views)</item>
+        <item>ViewPager2 with a Mutable Collection (Fragments</item>
+        <item>ViewPager2 with a TabLayout (Views)</item>
+        <item>ViewPager2 with Fake Dragging</item>
+        <item>ViewPager2 with PageTransformers</item>
+        <item>ViewPager2 with a Preview of Next/Prev Page</item>
+        <item>ViewPager2 with Nested RecyclerViews</item>
+    </string-array>
+    <string-array name="FragmentOrientationSpinner">
+        <item>horizontal</item>
+        <item>vertical</item>
+    </string-array>
+    <string-array name="FragmentCardSpinner">
+        <item>A</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>J</item>
+        <item>Q</item>
+        <item>K</item>
+    </string-array>
 </resources>

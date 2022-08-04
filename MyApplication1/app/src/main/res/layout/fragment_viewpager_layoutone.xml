@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/FragmentViewpaperTest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#72C43C"
+        android:textSize="50dp"
+        android:text="第一个分页"
+        android:gravity="center"/>
+</LinearLayout>
