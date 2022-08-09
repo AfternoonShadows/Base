@@ -3,10 +3,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/callbacktextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/activity_button"
-        android:background="@drawable/activity_button"/>
-
+        android:id="@+id/callbackbutton"
+        android:text="Call Phone"/>
 </LinearLayout>

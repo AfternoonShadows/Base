@@ -55,7 +55,7 @@ public class MediaRecoding extends AppCompatActivity {
             mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_2_TS);
 //            
             mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
-            filePast = new File(file.getPath()+"/"+recodData()+".amr");
+            filePast = new File(file.getPath()+"/"+recodData()+".war");
             if(filePast.exists())
                 filePast.delete();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

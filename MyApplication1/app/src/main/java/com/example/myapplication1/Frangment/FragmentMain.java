@@ -3,6 +3,7 @@ package com.example.myapplication1.Frangment;
 import android.content.Intent;
 import android.media.tv.TvContentRating;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -33,7 +34,8 @@ public class FragmentMain extends AppCompatActivity {
 //        设置布局方式setting the layout mode
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(fragmentRecyclerAdapter);
-        recyclerView.addOnItemTouchListener(new RecyclerView.SimpleOnItemTouchListener());
+
+//        recyclerView.addOnItemTouchListener(new RecyclerView.SimpleOnItemTouchListener());
 
         fragmentRecyclerAdapter.setOnItemClickListenerFragment(new FragmentRecyclerAdapter.OnItemClickListenerFragment() {
             @Override

@@ -14,11 +14,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication1">
-        <activity android:name=".Frangment.ViewPager.ViewPagerMain">
+        <activity android:name=".Service.ServiceMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".BroadcastReceiver.BroadcastFirst"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".BroadcastReceiver.BroadcaseSecond"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".Service.ServiceOnBind"/>
+        <service android:name=".Service.ServiceOnStartCommand"/>
     </application>
 </manifest>
