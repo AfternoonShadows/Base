@@ -8,42 +8,44 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication1.MVP.presenter.IPresenter;
 import com.example.myapplication1.MVP.presenter.Present;
+import com.example.myapplication1.MVP.presenter.Presentone;
 import com.example.myapplication1.R;
 
-public class View extends AppCompatActivity implements IView {
-    private IPresenter iPresenter;
+public class MvpView extends AppCompatActivity{
+    private static final String TAG = "MvpView";
+    private Present presenter;
     private TextView textView;
     private android.view.View button;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mvpfirst);
-        Log.e("View","onCreate");
-        iPresenter = new Present(View.this);
+        Log.e("View", "onCreate");
+        presenter = new Present();
         textView = findViewById(R.id.mvptext);
         button = findViewById(R.id.mvpbutton);
         button.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View v) {
-                Log.e("View","button");
-                iPresenter.loadData();
+                Log.e(TAG, "button onClick:");
+//                textView.setText(presenter.notifytext());
+                presenter.setiVew(iView);
+                presenter.notifyone();
             }
         });
     }
-
-    @Override
-    public void showLoadingProgress(String message) {
-        Log.e("View","showLoadingProgress");
-    }
-
-    @Override
-    public void showData(String text) {
-        Log.e("View","showData");
-        textView.setText(text);
-    }
-
+    IVew iView = new IVew() {
+        @Override
+        public void getdata(String test) {
+            textView.setText(test);
+        }
+    };
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+    public interface IVew{
+        public void getdata(String test);
     }
 }

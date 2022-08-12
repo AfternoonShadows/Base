@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -34,12 +36,14 @@ public class MediaRecoding extends AppCompatActivity {
         startRecoding();
     }
     public void startRecoding(){
+        if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+            Toast.makeText(this,"Storage is true",Toast.LENGTH_SHORT).show();
+          }else{
+            Toast.makeText(this,"Storage is false",Toast.LENGTH_SHORT).show();
+            return ;
+        }
         if(i==0){
-            try {
-                file = new File(Environment.getExternalStorageDirectory().getCanonicalPath()+"/recoding");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            file = new File(getExternalFilesDir(null)+"/recoding");
             if(!file.exists()) {
                 file.mkdir();
                 Log.e("not file", String.valueOf(file));

@@ -1,6 +1,6 @@
 // IMyAidlInterface.aidl
 package com.example.aidlservice;
-
+import com.example.aidlservice.parcelableone;
 // Declare any non-default types here with import statements
 
 interface IMyAidlInterface {
@@ -10,4 +10,7 @@ interface IMyAidlInterface {
      */
     void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
             double aDouble, String aString);
+    void getname();
+    void setname();
+    void removetext(inout RParcelable r);
 }

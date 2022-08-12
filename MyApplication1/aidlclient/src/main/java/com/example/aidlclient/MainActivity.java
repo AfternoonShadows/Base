@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.aidlservice.IMyAidlInterface;
+import com.example.aidlservice.RParcelable;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
@@ -60,6 +61,12 @@ public class MainActivity extends AppCompatActivity {
                         try {
                             Thread.sleep(5000);
                             iMyAidlInterface.basicTypes(0,0,true,0,0,"0");
+                            iMyAidlInterface.getname();
+                            iMyAidlInterface.setname();
+                            RParcelable rParcelable = new RParcelable();
+                            rParcelable.setName("chen");
+                            rParcelable.setAge(12);
+                            iMyAidlInterface.removetext(rParcelable);
                             Log.e("onClick","basicTypes");
                         } catch (InterruptedException | RemoteException e) {
                             e.printStackTrace();

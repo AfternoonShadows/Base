@@ -14,17 +14,35 @@ public class AIDLService extends Service {
         super.onCreate();
         Log.e(getPackageName()+".AIDLService","onCreate");
     }
+    public String a = null;
     IMyAidlInterface iMyAidlInterface = new IMyAidlInterface.Stub() {
         @Override
         public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
-            Log.e("iMyAidlInterface","basicTypes");
+            Log.e("AIDLService","basicTypes");
+            a = "adf";
+        }
+
+        @Override
+        public void getname() throws RemoteException {
+            Log.e("AIDLService","getname");
+            Log.e("AIDLService",a);
+        }
+
+        @Override
+        public void setname() throws RemoteException {
+            Log.e("a = ","setname");
+        }
+
+        @Override
+        public void removetext(RParcelable r) throws RemoteException {
+            Log.e("AIDLService",r.toString());
         }
     };
     @Override
     public IBinder onBind(Intent intent) {
         Log.e(getPackageName()+".AIDLService","onBind");
-//        new onBind()
         return iMyAidlInterface.asBinder();
+//        return new onBind();
     }
 
     @Override

@@ -43,11 +43,7 @@ public class AudioRecoding extends AppCompatActivity {
 
     public void AudioRecodingRecoding(View view){
         final byte data[] = new byte[bufferSizeInBytes];
-        try {
-            file = new File(Environment.getExternalStorageDirectory().getCanonicalPath()+"/recoding");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        file = new File(getExternalFilesDir(null)+"/recoding");
         if(!file.exists()) {
             file.mkdir();
             Log.e("not file", String.valueOf(file));
@@ -100,7 +96,7 @@ public class AudioRecoding extends AppCompatActivity {
     }
     public void AudioRecodingPlay(View view){
         final byte data[] = new byte[bufferSizeInBytes];
-        audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC,44100,AudioFormat.CHANNEL_IN_MONO,AudioFormat.ENCODING_PCM_16BIT,
+        audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC,44100,AudioFormat.CHANNEL_OUT_MONO,AudioFormat.ENCODING_PCM_16BIT,
                 data.length,AudioTrack.MODE_STATIC);
         audioTrack.write(data,0,data.length);
         audioTrack.play();

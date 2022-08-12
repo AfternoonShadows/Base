@@ -1,26 +1,36 @@
 package com.example.myapplication1.MVP.presenter;
 
+import android.content.Context;
 import android.util.Log;
 
 import com.example.myapplication1.MVP.model.Model;
 import com.example.myapplication1.MVP.view.IView;
+import com.example.myapplication1.MVP.view.MvpView;
 
-public class Present implements IPresenter, Model.LoadDataCall{
-    private IView iView;
+public class Present {
     private Model model;
-    public Present(IView iView){
-        this.iView = iView;
+    private MvpView.IVew iVew;
+
+    public Present() {
+        Log.e("IView", IView.class.getSimpleName());
         model = new Model();
-    }
-    @Override
-    public void loadData() {
-        Log.e("Present","loadData");
-        model.getData(Present.this);
+        model.setLoadDataCall(new Model.LoadDataListener() {
+            @Override
+            public void success(String text) {
+                iVew.getdata(text);
+            }
+        });
     }
 
-    @Override
-    public void success(String text) {
-        Log.e("Present","success");
-        iView.showData("hello world");
+    public void setiVew(MvpView.IVew iVew) {
+        this.iVew = iVew;
+    }
+
+    public String notifytext() {
+        return model.getData();
+    }
+
+    public void notifyone() {
+        model.notifyone();
     }
 }

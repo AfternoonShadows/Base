@@ -4,7 +4,23 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class RParcelable implements Parcelable {
+    public String name;
+    public int age;
+    public RParcelable(){};
     protected RParcelable(Parcel in) {
+        name = in.readString();
+        age = in.readInt();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeInt(age);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
     public static final Creator<RParcelable> CREATOR = new Creator<RParcelable>() {
@@ -19,12 +35,34 @@ public class RParcelable implements Parcelable {
         }
     };
 
-    @Override
-    public int describeContents() {
-        return 0;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public static Creator<RParcelable> getCREATOR() {
+        return CREATOR;
     }
 
     @Override
-    public void writeToParcel(Parcel dest, int flags) {
+    public String toString() {
+        return "RParcelable{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    public void readFromParcel(Parcel reply) {
     }
 }
