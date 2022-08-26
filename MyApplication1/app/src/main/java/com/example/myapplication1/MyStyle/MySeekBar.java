@@ -41,6 +41,7 @@ public class MySeekBar extends androidx.appcompat.widget.AppCompatSeekBar {
 //      最后重载一下滑动事件，从新计算progress值
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        super.onTouchEvent(event);
         if(!isEnabled())
             return false;
         switch (event.getAction()){

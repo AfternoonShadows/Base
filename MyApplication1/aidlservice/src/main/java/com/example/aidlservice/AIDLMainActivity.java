@@ -41,7 +41,7 @@ public class AIDLMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.e("AIDLMainActivity","onClick");
-                bindService(AIDLMainActivity.this);
+
             }
         });
     }

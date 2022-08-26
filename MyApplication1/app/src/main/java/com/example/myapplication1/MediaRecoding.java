@@ -1,7 +1,9 @@
 package com.example.myapplication1;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Build;
@@ -56,10 +58,11 @@ public class MediaRecoding extends AppCompatActivity {
 //
             mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
 //
-            mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_2_TS);
+            mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
 //            
-            mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
-            filePast = new File(file.getPath()+"/"+recodData()+".war");
+            mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+//            recodData()
+            filePast = new File(file.getPath()+"/"+"music"+".war");
             if(filePast.exists())
                 filePast.delete();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

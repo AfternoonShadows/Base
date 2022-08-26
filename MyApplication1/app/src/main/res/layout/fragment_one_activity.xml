@@ -3,11 +3,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
+    <EditText
+        android:id="@+id/et_fragment_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/activity_button"
-        android:background="@drawable/activity_button"
-        android:onClick="btn"/>
-
+        android:gravity="center"
+        android:text="123"/>
+    <Button
+        android:id="@+id/btn_fragment_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
 </LinearLayout>

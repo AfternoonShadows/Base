@@ -14,8 +14,8 @@ public class AccessBundleIntent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.informationaccess);
-        Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
-        Log.e("bundle",bundle.getString("put"));
+//        Intent intent = getIntent();
+//        Bundle bundle = intent.getExtras();
+//        Log.e("bundle",bundle.getString("put"));
     }
 }

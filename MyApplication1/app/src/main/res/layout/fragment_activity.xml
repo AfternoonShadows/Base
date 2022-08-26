@@ -3,11 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_fragment_activity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/activity_button"
-        android:background="@drawable/activity_button"
-        android:onClick="btn"/>
-
+        android:layout_height="match_parent"/>
 </LinearLayout>
