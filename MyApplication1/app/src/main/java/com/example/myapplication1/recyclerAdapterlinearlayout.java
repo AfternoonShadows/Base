@@ -29,6 +29,7 @@ public class recyclerAdapterlinearlayout extends RecyclerView.Adapter<recyclerAd
         }
     }
 
+
     /**
      * Initialize the dataset of the Adapter.
      *
@@ -45,6 +46,7 @@ public class recyclerAdapterlinearlayout extends RecyclerView.Adapter<recyclerAd
         // Create a new view, which defines the UI of the list item
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.activity_recyclerview_textview, viewGroup, false);
+
         return new ViewHolder(view);
     }
 

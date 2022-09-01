@@ -1,4 +1,4 @@
-package com.example.myapplication1.MyStyle;
+package com.example.myapplication1.BarStyle;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -6,16 +6,16 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 
-public class MySeekBar extends androidx.appcompat.widget.AppCompatSeekBar {
-    public MySeekBar(Context context) {
+public class VerticalSeekBarStyle extends androidx.appcompat.widget.AppCompatSeekBar {
+    public VerticalSeekBarStyle(Context context) {
         super(context);
     }
 
-    public MySeekBar(Context context, AttributeSet attrs) {
+    public VerticalSeekBarStyle(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public MySeekBar(Context context, AttributeSet attrs, int defStyleAttr) {
+    public VerticalSeekBarStyle(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 //      onDraw事件中旋转画布，与水平变垂直
@@ -54,5 +54,10 @@ public class MySeekBar extends androidx.appcompat.widget.AppCompatSeekBar {
                 break;
         }
         return true;
+    }
+    @Override
+    public synchronized void setProgress(int progress) {
+        super.setProgress(progress);
+        onSizeChanged(getWidth(), getHeight(), 0, 0);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.myapplication1;
+package com.example.myapplication1.BarStyle;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -7,9 +7,9 @@ import android.widget.SeekBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Random;
+import com.example.myapplication1.R;
 
-public class activityProgressbar extends AppCompatActivity {
+public class ProgressbarActivity extends AppCompatActivity {
     final int[] status = {0};
     ProgressBar progressBar;
     SeekBar seekBar;

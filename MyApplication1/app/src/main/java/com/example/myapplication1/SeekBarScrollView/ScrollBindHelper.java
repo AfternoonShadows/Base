@@ -4,13 +4,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.SeekBar;
 
+import com.example.myapplication1.BarStyle.VerticalSeekBarStyle;
+
 /**
  *
  **/
 public class ScrollBindHelper implements SeekBar.OnSeekBarChangeListener, ObservableScrollView.ScrollViewListener {
     private final String TAG = "ScrollBindHelper";
 
-    private final SeekBar seekBar;
+    private final VerticalSeekBarStyle seekBar;
     private final ObservableScrollView scrollView;
     private final View scrollContent;
     private static ScrollBindHelper helper;
@@ -18,7 +20,7 @@ public class ScrollBindHelper implements SeekBar.OnSeekBarChangeListener, Observ
     /**
      * 使用静态方法来绑定逻辑，代码可读性更高。
      */
-    public static ScrollBindHelper bind(SeekBar seekBar, ObservableScrollView scrollView) {
+    public static ScrollBindHelper bind(VerticalSeekBarStyle seekBar, ObservableScrollView scrollView) {
         //初始化工具类
         //封装好的获取屏幕工具类  进行初始化
         helper = new ScrollBindHelper(seekBar, scrollView);
@@ -28,7 +30,7 @@ public class ScrollBindHelper implements SeekBar.OnSeekBarChangeListener, Observ
     }
 
     //设置全局属性
-    private ScrollBindHelper(SeekBar seekBar, ObservableScrollView scrollView) {
+    private ScrollBindHelper(VerticalSeekBarStyle seekBar, ObservableScrollView scrollView) {
         this.seekBar = seekBar;
         this.scrollView = scrollView;
         //获取scrollview的第一个孩子的高度，在这里第一个孩子就是就是TextView
@@ -62,8 +64,10 @@ public class ScrollBindHelper implements SeekBar.OnSeekBarChangeListener, Observ
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
         Log.e(TAG, "onProgressChanged");
         Log.e(TAG, "fromUser = " + fromUser);
-        //用户操作的时候不触发
-        if (!fromUser) {
+        //用户操作的时候不触发(重写的SeekBar不能有效的控制拖动事件，
+        // 导致实际拖动时fromUser返回false，被判断不是人为滑动的。
+        // 而为true的值又不是需要的值，所以增加一下判断)
+        if (!isUserSeeking || fromUser) {
             return;
         }
         scrollView.scrollTo(0, progress * getScrollRange() / 50);

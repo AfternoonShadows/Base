@@ -66,7 +66,7 @@
                 android:layout_height="20dp"
                 android:background="@drawable/button_background"
                 android:text="^"/>
-            <com.example.myapplication1.SeekBarScrollView.VerticalSeekBar
+            <com.example.myapplication1.BarStyle.VerticalSeekBarStyle
                 android:id="@+id/sb_ac_m"
                 android:layout_below="@+id/btn_tuneup"
                 android:layout_width="match_parent"

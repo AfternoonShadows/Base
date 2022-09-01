@@ -21,9 +21,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recyclerview);
         RecyclerView recyclerView = findViewById(R.id.recyclerview1);
         recyclerAdapterlinearlayout activutyAdapter = new recyclerAdapterlinearlayout(a);
+//        下划线
         recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+//        布局方式
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(activutyAdapter);
+
 //        TextView tv = findViewById(R.id.textview);
 //        Drawable [] drawables = tv.getCompoundDrawables();
 //        drawables[1].setBounds(50,20,150,100);

@@ -1,0 +1,1 @@
+错误试例，不应该使用SeekBar拖拽进度条而是应该使用ScorellBar滚动条

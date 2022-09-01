@@ -1,16 +1,14 @@
-package com.example.myapplication1.MyStyle;
+package com.example.myapplication1.BarStyle;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Log;
 import android.widget.SeekBar;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication1.R;
 
-public class MySeekBarStyle extends AppCompatActivity {
+public class VerticalSeekBarActivity extends AppCompatActivity {
     private final String TAG = "MySeekBarStyle";
     @Override
     public void onCreate(Bundle savedInstanceState) {

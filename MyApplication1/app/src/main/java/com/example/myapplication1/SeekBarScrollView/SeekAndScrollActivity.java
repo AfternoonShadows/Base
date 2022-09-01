@@ -1,8 +1,6 @@
 package com.example.myapplication1.SeekBarScrollView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -10,13 +8,14 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication1.R;
+import com.example.myapplication1.BarStyle.VerticalSeekBarStyle;
 
-public class SSActivity extends AppCompatActivity {
+public class SeekAndScrollActivity extends AppCompatActivity {
     private final String TAG= "MainActivity";
     private Switch aSwitch;
     private ScrollBindHelper scrollBindHelper;
     private ObservableScrollView observableScrollView;
-    private VerticalSeekBar verticalSeekBar;
+    private VerticalSeekBarStyle verticalSeekBar;
     private TextView textView;
     private Button button;
 
