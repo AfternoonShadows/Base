@@ -54,6 +54,11 @@ public class FragmentOneActivity extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Log.e(TAG, "onActivityCreated");
+        Log.e(TAG, "onActivityCreated : " + getUserVisibleHint());
+        if (!getUserVisibleHint()) {
+            return;
+        }
+        Log.e(TAG, "start");
         mBtnFragmentOne = getActivity().findViewById(R.id.btn_fragment_one);
         mTextView = getActivity().findViewById(R.id.et_fragment_one);
         mBtnFragmentOne.setOnClickListener(new View.OnClickListener() {
@@ -62,8 +67,8 @@ public class FragmentOneActivity extends Fragment {
 //                mBtnFragmentOne.setText(mTextView.getText());
                 if (fragmentListener != null) {
                     fragmentListener.info("12");
-                }else{
-                    Log.e(TAG,"setOnClickListener NO");
+                } else {
+                    Log.e(TAG, "setOnClickListener NO");
                 }
             }
         });
