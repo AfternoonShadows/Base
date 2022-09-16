@@ -37,7 +37,6 @@ public class PlaceholderFragment extends BaseLazyFragment {
         Log.e(TAG, "loadDataStart");
         button.setText("dsfsdfsd");
         mLoadDataFinished = true;
-
     }
 
     @Override
@@ -58,14 +57,3 @@ public class PlaceholderFragment extends BaseLazyFragment {
         return inflater.inflate(R.layout.fragment_one_activity, container, false);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
