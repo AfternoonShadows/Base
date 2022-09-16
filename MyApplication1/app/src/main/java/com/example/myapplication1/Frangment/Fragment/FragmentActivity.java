@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.myapplication1.Frangment.Lazy.PlaceholderFragment;
 import com.example.myapplication1.R;
 
 import java.util.ArrayList;
@@ -69,6 +70,7 @@ public class FragmentActivity extends AppCompatActivity implements fragmentListe
         mViewPager = findViewById(R.id.vp_fragment_activity);
         list.add(new FragmentOneActivity());
         list.add(new FragmentTwoActivity());
+        list.add(PlaceholderFragment.getInstance());
         mViewPager.setOffscreenPageLimit(1);
         mViewPager.setAdapter(new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override

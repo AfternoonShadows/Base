@@ -46,19 +46,30 @@ public class FragmentTwoActivity extends Fragment {
         Log.e(TAG, "onCreateView");
         return mView;
     }
+//    懒加载如果在当前页面isVisibleToUser为true，否则为false，每次加载fragment会先加载setUserVisibleHint
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        Log.e(TAG, "setUserVisibleHint");
+        if (!isVisibleToUser) {
+            return;
+        }else{
+            mBtnFragmentOne = getActivity().findViewById(R.id.btn_fragment_two);
+            mTextView = getActivity().findViewById(R.id.et_fragment_two);
+            mBtnFragmentOne.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mBtnFragmentOne.setText(mTextView.getText());
+                    Log.e(TAG, "1231");
+                }
+            });
+        }
+    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Log.e(TAG, "onActivityCreated");
-        mBtnFragmentOne = getActivity().findViewById(R.id.btn_fragment_two);
-        mTextView = getActivity().findViewById(R.id.et_fragment_two);
-        mBtnFragmentOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mBtnFragmentOne.setText(mTextView.getText());
-            }
-        });
     }
 
     @Override

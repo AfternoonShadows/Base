@@ -23,6 +23,11 @@
         <entry key="app/src/main/res/layout/animation_springanimation.xml" value="0.3125" />
         <entry key="app/src/main/res/layout/animation_statelistanimator_activity.xml" value="0.1" />
         <entry key="app/src/main/res/layout/animation_tweenanimation_activity.xml" value="0.3125" />
+        <entry key="app/src/main/res/layout/fragment_activity.xml" value="0.16438703140830802" />
+        <entry key="app/src/main/res/layout/fragment_base_card_activity.xml" value="0.3380208333333333" />
+        <entry key="app/src/main/res/layout/fragment_one_activity.xml" value="0.16438703140830802" />
+        <entry key="app/src/main/res/layout/fragment_two_activity.xml" value="0.129981884057971" />
+        <entry key="app/src/main/res/layout/fragmentmain.xml" value="0.129981884057971" />
         <entry key="app/src/main/res/xml/animator_statelistanimator.xml" value="0.1" />
       </map>
     </option>

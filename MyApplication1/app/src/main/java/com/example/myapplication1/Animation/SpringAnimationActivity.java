@@ -30,7 +30,6 @@ public class SpringAnimationActivity extends AppCompatActivity {
     private SeekBar mFinalPosition;
     private TextView mFvSpring;
     private Button mBtnReset;
-
     private VelocityTracker velocityTracker;
     private float downX, downY;
     private SpringAnimation animationX, animationY;
