@@ -3,3 +3,5 @@ stateListAnimator类使用xml文件完成视图的动画操作
 ATweenAnimation 补间动画 实现了拉伸和缩放，旋转       后续完善
 moveAnimation   实现视图的移动包括平移和弧形移动
 springAnimation 弹簧动画,移动到一定位置在快速返回
+ 动画的主要分类：Main categories of animation
+mFrame_Animation 逐帧动画

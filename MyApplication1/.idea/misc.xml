@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.113" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.113" />
         <entry key="app/src/main/res/drawable/ic_myseekbar.xml" value="0.113" />
+        <entry key="app/src/main/res/drawable/m_frame_animation.xml" value="0.1535" />
         <entry key="app/src/main/res/drawable/shape.xml" value="0.113" />
         <entry key="app/src/main/res/drawable/switch_thumb.xml" value="0.113" />
         <entry key="app/src/main/res/layout/activity_button.xml" value="0.16438703140830802" />
@@ -18,6 +19,8 @@
         <entry key="app/src/main/res/layout/activity_spring.xml" value="0.12907608695652173" />
         <entry key="app/src/main/res/layout/animation_activity.xml" value="0.23565573770491804" />
         <entry key="app/src/main/res/layout/animation_atweenanimation.xml" value="0.3125" />
+        <entry key="app/src/main/res/layout/animation_fanimation.xml" value="0.16666666666666666" />
+        <entry key="app/src/main/res/layout/animation_frame_animation.xml" value="0.125" />
         <entry key="app/src/main/res/layout/animation_moveview_activity.xml" value="0.18" />
         <entry key="app/src/main/res/layout/animation_spring_translation.xml" value="0.12907608695652173" />
         <entry key="app/src/main/res/layout/animation_springanimation.xml" value="0.3125" />
