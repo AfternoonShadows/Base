@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><!--控件配置信息-->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/widget_layout"
+    android:minWidth="100dp"
+    android:minHeight="100dp">
+    <!--    updatePeriodMillis:触发控件的更新方法onUpdate-->
+</appwidget-provider>

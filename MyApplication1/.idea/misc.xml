@@ -11,6 +11,8 @@
         <entry key="app/src/main/res/drawable/m_frame_animation.xml" value="0.1535" />
         <entry key="app/src/main/res/drawable/shape.xml" value="0.113" />
         <entry key="app/src/main/res/drawable/switch_thumb.xml" value="0.113" />
+        <entry key="app/src/main/res/drawable/widget_item_background.xml" value="0.1965" />
+        <entry key="app/src/main/res/layout/activity_bitmap_pool.xml" value="0.17135416666666667" />
         <entry key="app/src/main/res/layout/activity_button.xml" value="0.16438703140830802" />
         <entry key="app/src/main/res/layout/activity_handler.xml" value="0.12962962962962962" />
         <entry key="app/src/main/res/layout/activity_progressbar.xml" value="0.16438703140830802" />
@@ -31,6 +33,8 @@
         <entry key="app/src/main/res/layout/fragment_one_activity.xml" value="0.16438703140830802" />
         <entry key="app/src/main/res/layout/fragment_two_activity.xml" value="0.129981884057971" />
         <entry key="app/src/main/res/layout/fragmentmain.xml" value="0.129981884057971" />
+        <entry key="app/src/main/res/layout/widget_item.xml" value="0.14140625" />
+        <entry key="app/src/main/res/layout/widget_layout.xml" value="0.33" />
         <entry key="app/src/main/res/xml/animator_statelistanimator.xml" value="0.1" />
       </map>
     </option>
