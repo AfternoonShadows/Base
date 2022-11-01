@@ -1,4 +1,4 @@
-package com.example.myapplication1;
+package com.example.myapplication1.Activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication1.R;
 
 public class TextShowHide extends AppCompatActivity {
     private View button;

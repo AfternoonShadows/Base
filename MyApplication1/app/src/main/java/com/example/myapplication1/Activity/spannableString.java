@@ -1,4 +1,4 @@
-package com.example.myapplication1;
+package com.example.myapplication1.Activity;
 
 
 import android.graphics.Color;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication1.R;
 
 import javax.xml.parsers.SAXParser;
 

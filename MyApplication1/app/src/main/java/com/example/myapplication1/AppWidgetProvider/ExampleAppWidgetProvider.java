@@ -12,6 +12,7 @@ import android.graphics.Matrix;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.util.Log;
+import android.view.View;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
@@ -95,12 +96,12 @@ public class ExampleAppWidgetProvider extends AppWidgetProvider {
         Log.e(TAG, "onReceive: action = " + intent.getAction());
         // 这里判断自定义的action,并实现action。例如，控件被单击之后，执行一个动画：旋转图片一周，通过不断的更新RemoveViews来实现
         if (intent.getAction().equals(CLICK_ACTION)) {
-            // 广播生命周期短通过线程执行
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                }
-            }).start();
+            context.startService(new Intent(context,ExampleAPPWidgetProviderService.class));
+            RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_layout);
+            remoteViews.setViewVisibility(R.id.img_widget, View.INVISIBLE);
+            // getInstance得到已经创建的对象，updateAppWidget更新内容，
+            // 参数第一个(ComponentName provider) 获取需要更新的微件，第二个(RemoteViews views) 更新的内容
+            AppWidgetManager.getInstance(context).updateAppWidget(new ComponentName(context,ExampleAppWidgetProvider.class),remoteViews);
         }
     }
 

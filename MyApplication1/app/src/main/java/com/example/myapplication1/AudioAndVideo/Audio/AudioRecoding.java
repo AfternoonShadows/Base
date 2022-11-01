@@ -1,4 +1,4 @@
-package com.example.myapplication1;
+package com.example.myapplication1.AudioAndVideo.Audio;
 
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -10,6 +10,9 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication1.R;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;

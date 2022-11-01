@@ -1,4 +1,4 @@
-package com.example.myapplication1;
+package com.example.myapplication1.Activity;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication1.InformationAccess.AccessBundleIntent;
+import com.example.myapplication1.R;
 
 public class Buttonbtn extends AppCompatActivity {
     @Override

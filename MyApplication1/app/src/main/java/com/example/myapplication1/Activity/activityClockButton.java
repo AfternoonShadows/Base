@@ -1,4 +1,4 @@
-package com.example.myapplication1;
+package com.example.myapplication1.Activity;
 
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -11,6 +11,8 @@ import android.widget.Switch;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication1.R;
 
 public class activityClockButton extends AppCompatActivity {
     @Override

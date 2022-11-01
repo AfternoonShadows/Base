@@ -1,4 +1,4 @@
-package com.example.myapplication1;
+package com.example.myapplication1.Activity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication1.R;
+
 import java.util.Timer;
 import java.util.TimerTask;
 

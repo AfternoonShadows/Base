@@ -1,10 +1,13 @@
-package com.example.myapplication1;
+package com.example.myapplication1.Activity;
 
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication1.R;
+
 import java.io.File;
 
 public class activityFile extends AppCompatActivity {

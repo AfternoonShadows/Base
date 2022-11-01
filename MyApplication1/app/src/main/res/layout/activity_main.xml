@@ -8,7 +8,7 @@
     android:divider="@drawable/shape"
     android:showDividers="beginning|middle|end"
     android:dividerPadding="1dp"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
         <TextView
             android:id="@+id/linerlayout_horizotal"
             android:layout_width="match_parent"

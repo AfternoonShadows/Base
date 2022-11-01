@@ -1,9 +1,7 @@
-package com.example.myapplication1;
+package com.example.myapplication1.AudioAndVideo.Audio;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.pm.PackageManager;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Build;
@@ -16,6 +14,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import com.example.myapplication1.R;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;

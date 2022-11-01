@@ -1,7 +1,6 @@
-package com.example.myapplication1;
+package com.example.myapplication1.Activity;
 
 import android.Manifest;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -12,10 +11,11 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import com.example.myapplication1.R;
 
 public class ActivityFirst extends AppCompatActivity {
     @Override

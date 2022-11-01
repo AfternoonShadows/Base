@@ -1,4 +1,4 @@
-package com.example.myapplication1;
+package com.example.myapplication1.Activity;
 
 import android.os.Bundle;
 import android.widget.CompoundButton;
@@ -6,6 +6,8 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication1.R;
 
 public class SwitchActivity extends AppCompatActivity {
     private Switch aSwitch;
